@@ -2,7 +2,6 @@ package SeleniumSessions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverBasics {
 
@@ -21,11 +20,13 @@ public class WebDriverBasics {
 		System.setProperty("webdriver.chrome.driver", "C:\\Sagar\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
+		//get the page title
 		driver.get("https:\\www.google.com");
-		String title = driver.getTitle();
+		String title = driver.getTitle(); 
 		System.out.println(title);
 		
-		if (title.equals("Google"))
+		// Validation point
+		if (title.equals("Google")) 
 		{
 			System.out.println("Title is correct");
 		}
@@ -33,7 +34,10 @@ public class WebDriverBasics {
 		{
 			System.out.println("Title is not correct");
 		}
-			
+		
+		System.out.println(driver.getCurrentUrl()); //to get current URL of the page
+		//System.out.println(driver.getPageSource()); //to get the page source
+		
 		driver.quit();
 	}
 
