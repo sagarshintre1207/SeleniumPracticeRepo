@@ -18,15 +18,17 @@ public class HTMLUnitDriverConcept {
 		
 		//htmluitdriver is not available with selenium 3.x version
 		//htmlunitdriver --- to use this concept, we have to download the htmlunitdriver jar file and import the same in to the project
+		//Not suitable for for Actions class--user actions--mousemovement, doubleclick, drag and drop
+		//It is also called headless browser or Ghost Driver
+		//--HTML Driver --- For Java
+		//--PhantomJS --- For Javascript
+		
 		
 		//advantages
 		//1. Testing will happen behind the scene. No browser will be launched
 		//2. Execution of test cases will be fast
 		//3. Performance of test execution will be increased
-		//4. Not suitable for for Actions class--user actions--mousemovement, doubleclick, drag and drop
-		//5. It is also called headless browser or Ghost Driver
-		//--HTML Driver --- For Java
-		//--PhantomJS --- For Javascript
+		
 		
 		//WebDriver driver = new HtmlUnitDriver();
 		
