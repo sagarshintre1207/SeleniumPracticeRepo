@@ -13,6 +13,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ReadPropFile {
 	
+	//This session is related to reading data from property file
+	
 	static WebDriver driver;
 
 	public static void main(String[] args) throws IOException {
