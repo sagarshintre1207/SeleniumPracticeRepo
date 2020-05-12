@@ -35,7 +35,7 @@ public class JavaScriptExecutorConcepts {
 
 	private static void ChangeColor(String color, WebElement element, WebDriver driver) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("argument[0].style.backgroundcolor = '"+color+"'", element);
+		js.executeScript("argument[0].style.backgroundcolor = '"+color+"'", element);`
 	
 	try {
 		Thread.sleep(20);
