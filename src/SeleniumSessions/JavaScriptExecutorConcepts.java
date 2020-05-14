@@ -13,12 +13,14 @@ public class JavaScriptExecutorConcepts {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Sagar\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.amazon.com/");
+		//driver.get("https://www.amazon.com/");
+		driver.get("https://ui.freecrm.com/");
 		//driver.findElement(By.linkText("Best Sellers")).click();
 		
 		//executeScript method is used to execute the Javascript code
-		WebElement BestSellerlnk = driver.findElement(By.linkText("Best Sellers"));
-		flash(BestSellerlnk, driver);
+		//WebElement BestSellerlnk = driver.findElement(By.linkText("Best Sellers"));
+		WebElement Loginbtn = driver.findElement(By.xpath("//*[contains(text(),'Login')]"));
+		flash(Loginbtn, driver);
 		
 	}	
 	public static void flash(WebElement element, WebDriver driver) {
@@ -26,7 +28,7 @@ public class JavaScriptExecutorConcepts {
 		String bgcolor = element.getCssValue(("backgroundcolor"));
 		for (int i=0;i<=50;i++)
 		{
-			ChangeColor("rgb(200,0,0)", element, driver);
+			ChangeColor("rgb(0,200,0)", element, driver);
 			ChangeColor(bgcolor, element,driver);
 		}
 		
